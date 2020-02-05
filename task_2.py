@@ -10,7 +10,7 @@ time_in_seconds = int(time_in_seconds)
 
 time_in_seconds /= 3600
 hours = int(time_in_seconds)  
-time_in_seconds = (time_in_seconds - hours )* 60   
+time_in_seconds = (time_in_seconds - hours) * 60
 minutes = int(time_in_seconds)
 seconds = int((time_in_seconds - minutes) * 60)
 
