@@ -3,7 +3,7 @@
 
 while True:
     value = '5'
-    #   value = input('Введите целое число вдиапазоне 0..9: ')
+    # value = input('Введите целое число в диапазоне 0..9: ')
     if value.isdecimal():
         value = int(value)
         if (value > 0) and (value < 9):

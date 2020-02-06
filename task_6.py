@@ -12,3 +12,25 @@
 # 5-й день: 2,93
 # 6-й день: 3,22
 # Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
+
+print('Программа принимает в качестве входных данных только целые числа')
+while True:
+    current_dist = '2'
+    target_dist = '6'
+    # current_dist = input('Введите растояние которое вы пробегаете: ')
+    # target_dist = input('Введите рестояние которое вы хотите пробежать: ')
+    if current_dist.isdigit() and target_dist.isdigit():
+        break
+    continue
+
+day_index = 1
+distance = int(current_dist)
+target_dist = int(target_dist)
+print('%d-й день: %d' % (day_index, int(current_dist)))
+
+while distance < target_dist:
+    day_index += 1
+    distance += distance * 0.1
+    print('%d-й день: %.02f' % (day_index, distance))
+
+print(f'Вы достигните результата - {target_dist} км, на {day_index}-й день после начала тренировок.')

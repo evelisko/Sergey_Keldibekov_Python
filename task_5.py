@@ -5,22 +5,24 @@
 # вычислите рентабельность выручки (соотношение прибыли к выручке).
 # Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
 
-# while True:
-profit = input('Введите величину прибыли фирмы: ')
-costs = input('Введите величину издержек: ')
-#  val1 = profit.isdigit()
-#    val2 = costs.isdigit()
-#    if costs.isdigit():       # and profit.isdigit():
-#        break
-#    continue
-
+print('Программа принимает в качестве входных данных только целые числа')
+while True:
+    profit = '300000'
+    print('Прибыль фирмы - ' + profit)
+    costs = '200000'
+    print('Издежки - ' + costs)
+    # profit = input('Введите величину прибыли фирмы: ')
+    # costs = input('Введите величину издержек: ')
+    if costs.isdigit() and profit.isdigit():
+        break
+    continue
 
 profit = float(profit)
 costs = float(costs)
 is_profit = 0
 
 if profit > costs:
-    print('Фирма приносит прибыль')
+    print('[ Фирма приносит прибыль ]')
     print('Рентабельность: %.3f' % (profit / costs))
     is_profit = True
 elif profit < costs:
@@ -30,10 +32,12 @@ else:
 
 if is_profit:
     while True:
-        worker_count = input('Введите количество сотрудников: ')
+        worker_count = '6.5'
+        print('Количество сотрудников: ' + worker_count)
+        # worker_count = input('Введите количество сотрудников: ')
         if worker_count.isdecimal():
             break
-        print('не верный формат ввода. Попробуйте еще')
+        print('Не верный формат ввода. Попробуйте еще')
         continue
     worker_count = int(worker_count)
-    print('В рассчете на одного сотрудника прибыл составляет %.3f' % (profit/worker_count))
+    print('В рассчете на одного сотрудника прибыль составляет %.3f' % (profit / worker_count))
