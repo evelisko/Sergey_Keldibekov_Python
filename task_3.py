@@ -2,11 +2,11 @@
 # Считаем 3 + 33 + 333 = 369.
 
 while True:
-    value = '5'
+    value = '9'
     # value = input('Введите целое число в диапазоне 0..9: ')
     if value.isdecimal():
         value = int(value)
-        if (value > 0) and (value < 9):
+        if (value >= 0) and (value < 10):
             break
     continue
 
