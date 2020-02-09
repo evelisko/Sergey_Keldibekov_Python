@@ -16,3 +16,13 @@ for digit in value:
         max_value = int(digit)
 
 print(f'Самая большая цифра в числе - это {max_value}')
+
+# max_value = value % 10
+#
+# while not value -- 0:
+#     if value % 10 >= max_value:
+#         max_value = value % 10
+#     value //= 10
+#
+# print(max_value)
+

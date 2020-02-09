@@ -30,7 +30,7 @@ print('%d-й день: %d' % (day_index, int(current_dist)))
 
 while distance < target_dist:
     day_index += 1
-    distance += distance * 0.1
+    distance += distance * 0.1  # distance *= 1.1
     print('%d-й день: %.02f' % (day_index, distance))
 
 print(f'Вы достигните результата - {target_dist} км, на {day_index}-й день после начала тренировок.')

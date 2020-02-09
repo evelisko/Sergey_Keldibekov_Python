@@ -17,3 +17,9 @@ value100 = value10 * 10 + value
 result_value = value + value10 + value100
 
 print(f'{value} + {value10} + {value100} = {result_value}')
+
+# [::-1] - строrf в обратном порядке выводится
+# b =copy.copy(a)
+# b = copy.deepcopy(a)
+# d = a[:]
+# print(dir(a))# выводт список операция доя этого класса.

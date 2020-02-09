@@ -16,3 +16,11 @@ minutes = int(time_in_seconds)
 seconds = int((time_in_seconds - minutes) * 60)
 
 print("%02d:%02d:%02d" % (hours, minutes, seconds))
+
+# # Так коточе
+# hour = time_in_seconds // 3600
+# minutes = (time_in_seconds % 3600) // 60
+# seconds = (time_in_seconds % 3600) % 60
+# print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+# # такой вариант вывода тоже более интерессный
+
