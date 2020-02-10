@@ -1,18 +1,14 @@
-# Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
-# Для решения используйте цикл while и арифметические операции.
+# 4. Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с новой строки.
+# Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове.
 
-while True:
-    value = '235859'
-    # value = input('Введите целое положительное число: ')
-    if value.isdecimal():
-        break
-    continue
+# input_string = input('Ведите строку: ').split()
+simple_str = 'Числа шестнадцетиричной системы счисления -  0123456789ABCDEF'
+input_string = simple_str.split()
+print(input_string)
+# i = 1
+# for el in input_string:
+#     print(f'{i}) {el[:10]}')
+#     i += 1
 
-print(f'Введено число: {value}')
-
-max_value = 0
-for digit in value:
-    if int(digit) > max_value:
-        max_value = int(digit)
-
-print(f'Самая большая цифра в числе - это {max_value}')
+for ind, el in enumerate(input_string, 1):
+    print(f'{ind}) {el[:10]}')

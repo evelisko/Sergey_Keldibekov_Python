@@ -1,19 +1,40 @@
-# Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. Например, пользователь ввёл число 3.
-# Считаем 3 + 33 + 333 = 369.
+# 3. Пользователь вводит месяц в виде целого числа от 1 до 12. Сообщить к какому времени года относится месяц
+# (зима, весна, лето, осень). Напишите решения через list и через dict.
+month_list = ['Январ', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь',
+              'Декабрь']
+month_dict = {
+    1: 'Январь - зимний месяц',
+    2: 'Февраль - зимний месяц',
+    3: 'Март - весенний месяц',
+    4: 'Апрель - весенний месяц',
+    5: 'Май - весенний месяц',
+    6: 'Июнь - летний месяц',
+    7: 'Июль - летний месяц',
+    8: 'Август - летний месяц',
+    9: 'Сентябрь - осенний месяц',
+    10: 'Октябрь - осенний месяц',
+    11: 'Ноябрь - осенний месяц',
+    12: 'Декабрь - зимний месяц'
+}
 
-while True:
-    value = '9'
-    # value = input('Введите целое число в диапазоне 0..9: ')
-    if value.isdecimal():
-        value = int(value)
-        if (value >= 0) and (value < 10):
-            break
-    continue
+month_index = int(input('Введите номер месяца: '))
 
-print(f'Введено число: {value}')
+# // print(month_dict.[5])
+if (month_index > 0) and (month_index < 13):
+    season_type = ''
+    if month_index in [12, 1, 2]:
+        season_type = '- это зимний месяц'
+    if month_index in [3, 4, 5]:
+        season_type = '- это весенний месяц'
+    if month_index in [6, 7, 8]:
+        season_type = '- это летний месяц'
+    if month_index in [9, 10, 11]:
+        season_type = '- это осенний месяц'
+    print(f'{month_index} {month_list[month_index - 1]} {season_type}')
+else:
+    print('Такого месяца нет')
 
-value10 = value * 10 + value
-value100 = value10 * 10 + value
-result_value = value + value10 + value100
-
-print(f'{value} + {value10} + {value100} = {result_value}')
+if month_index in month_dict.keys():
+    print(f'{month_index} {month_dict.get(month_index)}')
+else:
+    print('Такого месяца нет')
