@@ -11,12 +11,15 @@ my_list = [7, 5, 3, 3, 2]
 
 print(my_list)
 
+# 1- й способ  ( Программа отрабатывает корректно, но нельзя оптередитб в какую позицию была цыфра установленна.
 # value = int(input('Введите число: '))
 # my_list.append(value)
 # my_list.sort(reverse=True)  # самый простой способ.
 # print(f'Пользовательввел число {value}. Результат: {str(my_list)[1:-1]}.')
 
-value = int(input('Введите число: '))
+# 2-й способ
+# value = int(input('Введите число: '))
+value = 6
 ind = len(my_list)
 while ind > 0:
     if value < my_list[ind - 1]:
@@ -25,10 +28,5 @@ while ind > 0:
         break
     ind -= 1
 
-print(f'Пользовательввел число {value}. Результат: {str(my_list)[1:-1]}.')
+print(f'Пользователь ввел число {value}. Результат: {str(my_list)[1:-1]}.')
 
-# my_list = [10, 20, 20, 20, 30, 50, 70, 30]  # Поиск самых частовстречающихся элементов в словаре
-# print(max(set(my_list), key=my_list.count))
-#
-# my_list = [10, 10, 3, 4, 5, 9, 30, 30]  # Удаление повторяющихся элементов
-# print(list(set(my_list)))

@@ -20,47 +20,26 @@
 
 # Структура из кортежей.
 
-# [
-#   (1, {“название”: “компьютер”, “цена”: 20000, “количество”: 5, “eд”: “шт.”}),
-#   (2, {“название”: “принтер”, “цена”: 6000, “количество”: 2, “eд”: “шт.”}),
-#   (3, {“название”: “сканер”, “цена”: 2000, “количество”: 7, “eд”: “шт.”})
-# ]
+goods = [
+    (1, {'название': 'компьютер', 'цена': 20000, 'количество': 5, 'eд': 'шт.'}),
+    (2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт.'}),
+    (3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт.'})
+]
 
-# Словарь.
-# {
-#     “название”: [“компьютер”, “принтер”, “сканер”],
-#     “цена”: [20000, 6000, 2000],
-#     “количество”: [5, 2, 7],
-#     “ед”: [“шт.”]
-# }
+dict_keys = list(goods[0][1].keys())
+# print(f'dict_keys = {dict_keys}')
+items = list((zip(goods[0][1].values(), goods[1][1].values(), goods[2][1].values())))
 
+for ind, itm in enumerate(items):
+    tmp = []
+    for i in itm:
+        if i not in tmp:
+            tmp.append(i)
+    items[ind] = tmp
 
+# print(f'items = {items}')
+dic = dict(zip(dict_keys, items))
 
-
-
-
-
-
-
-
-print('Программа принимает в качестве входных данных только целые числа')
-while True:
-    current_dist = '2'
-    target_dist = '6'
-    # current_dist = input('Введите растояние которое вы пробегаете: ')
-    # target_dist = input('Введите рестояние которое вы хотите пробежать: ')
-    if current_dist.isdigit() and target_dist.isdigit():
-        break
-    continue
-
-day_index = 1
-distance = int(current_dist)
-target_dist = int(target_dist)
-print('%d-й день: %d' % (day_index, int(current_dist)))
-
-while distance < target_dist:
-    day_index += 1
-    distance += distance * 0.1
-    print('%d-й день: %.02f' % (day_index, distance))
-
-print(f'Вы достигните результата - {target_dist} км, на {day_index}-й день после начала тренировок.')
+print('Результирующая структура')
+for dic_key, dic_value in dic.items():
+    print(f'{dic_key}: {dic_value}')

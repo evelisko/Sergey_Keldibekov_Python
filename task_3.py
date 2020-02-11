@@ -17,8 +17,8 @@ month_dict = {
     12: 'Декабрь - зимний месяц'
 }
 
-month_index = int(input('Введите номер месяца: '))
-
+# month_index = int(input('Введите номер месяца: '))
+month_index = 7
 # // print(month_dict.[5])
 if (month_index > 0) and (month_index < 13):
     season_type = ''
@@ -34,6 +34,7 @@ if (month_index > 0) and (month_index < 13):
 else:
     print('Такого месяца нет')
 
+# С помощью словаря. ---------------------------------
 if month_index in month_dict.keys():
     print(f'{month_index} {month_dict.get(month_index)}')
 else:
