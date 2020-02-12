@@ -19,14 +19,17 @@ print(my_list)
 
 # 2-й способ
 # value = int(input('Введите число: '))
-value = 6
+value = 8
 ind = len(my_list)
 while ind > 0:
-    if value < my_list[ind - 1]:
+    if value <= my_list[ind - 1]:
         my_list.insert(ind, value)
         print(f'В позицию - {ind}')
         break
     ind -= 1
+
+if ind == 0:
+    my_list.insert(ind, value)
 
 print(f'Пользователь ввел число {value}. Результат: {str(my_list)[1:-1]}.')
 
