@@ -1,41 +1,34 @@
-# 3. Пользователь вводит месяц в виде целого числа от 1 до 12. Сообщить к какому времени года относится месяц
-# (зима, весна, лето, осень). Напишите решения через list и через dict.
-month_list = ['Январ', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь',
-              'Декабрь']
-month_dict = {
-    1: 'Январь - зимний месяц',
-    2: 'Февраль - зимний месяц',
-    3: 'Март - весенний месяц',
-    4: 'Апрель - весенний месяц',
-    5: 'Май - весенний месяц',
-    6: 'Июнь - летний месяц',
-    7: 'Июль - летний месяц',
-    8: 'Август - летний месяц',
-    9: 'Сентябрь - осенний месяц',
-    10: 'Октябрь - осенний месяц',
-    11: 'Ноябрь - осенний месяц',
-    12: 'Декабрь - зимний месяц'
-}
+# 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента,
+# и возвращает сумму наибольших двух аргументов.
 
-# month_index = int(input('Введите номер месяца: '))
-month_index = 7
-# // print(month_dict.[5])
-if (month_index > 0) and (month_index < 13):
-    season_type = ''
-    if month_index in [12, 1, 2]:
-        season_type = '- это зимний месяц'
-    if month_index in [3, 4, 5]:
-        season_type = '- это весенний месяц'
-    if month_index in [6, 7, 8]:
-        season_type = '- это летний месяц'
-    if month_index in [9, 10, 11]:
-        season_type = '- это осенний месяц'
-    print(f'{month_index} {month_list[month_index - 1]} {season_type}')
-else:
-    print('Такого месяца нет')
 
-# С помощью словаря. ---------------------------------
-if month_index in month_dict.keys():
-    print(f'{month_index} {month_dict.get(month_index)}')
-else:
-    print('Такого месяца нет')
+# digit_1 = int(input('Введите 1-е чило: '))
+# digit_2 = int(input('Введите 2-е чило: '))
+# digit_3 = int(input('Введите 3-е чило: '))
+
+digit_1 = 12
+digit_2 = 1
+digit_3 = 7
+
+
+# 1-й вариант.-------------------------------------------
+def my_func(one, two, three):
+    digits = sorted([one, two, three])
+    return digits[2] + digits[1]
+
+
+print(my_func(digit_1, digit_2, digit_3))
+
+
+# 2-й вариант.-------------------------------------------
+def my_func_ex(one, two, three):
+    digits = [one, two, three]
+    i = 0
+    while i < len(digits) - 1:
+        if digits[i] < digits[i + 1]:
+            digits[i], digits[i + 1] = digits[i + 1], digits[i]
+        i += 1
+    return digits[0] + digits[1]
+
+
+print(my_func_ex(digit_1, digit_2, digit_3))
