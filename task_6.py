@@ -1,24 +1,27 @@
-# 6. Реализовать функцию int_func(), принимающую слово из маленьких латинских букв и возвращающую его же,
-# но с прописной первой буквой. Например, print(int_func(‘text’)) -> Text.
-# Продолжить работу над заданием. В программу должна попадать строка из слов, разделенных пробелом. Каждое слово
-# состоит из латинских букв в нижнем регистре. Сделать вывод исходной строки, но каждое слово должно начинаться с
-# заглавной буквы. Необходимо использовать написанную ранее функцию int_func().
+# 6) Реализовать два небольших скрипта:
+# а) итератор, генерирующий целые числа, начиная с указанного,
+# б) итератор, повторяющий элементы некоторого списка, определенного заранее.
+# Подсказка: использовать функцию ​count() и cycle() модуля itertools.​ Обратите внимание, что
+# создаваемый  цикл  не  должен  быть  бесконечным.  Необходимо  предусмотреть  условие  его
+# завершения.
+# Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10
+# завершаем  цикл.  Во  втором  также  необходимо  предусмотреть  условие,  при  котором
+# повторение элементов списка будет прекращено.
 
 
-def title_acsii(string_data):
-    string_data = str(string_data)
-    tmp = ord(string_data[0]) - 32
-    # string_data = chr(tmp) + string_data[1:]    # так более наглядно, по моему
-    string_data = f'{chr(tmp)}{string_data[1:]}'  # а так менне
-    return string_data
+from itertools import count
+from itertools import cycle
+from itertools import islice
 
+print('Итератор itertools.count()')
+for el in islice(count(7), 6):
+    print(el, end=' ')
+print(end='\n\n')
 
-text_string = input('Введите строку из прописных букв: ')
-for str_element in text_string.split():
-    print(f'{title_acsii(str_element)} ', end='')
+print('Итератор itertools.cycle()')
+
+data_list = ['A', 'C', '-', 'D', 'C']
+
+for el in islice(cycle(data_list), 7):
+    print(el, end=' ')
 print()
-
-print('С использованем лямба-функции')
-word_list = list(map(lambda x: title_acsii(x), text_string.split()))
-for str_element in word_list:
-    print(f'{str_element} ', end='')
