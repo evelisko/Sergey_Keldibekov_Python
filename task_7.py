@@ -6,7 +6,7 @@
 # четырёх 4! = 1 * 2 * 3 * 4 = 24.
 
 
-def fact_n(n):
+def facto_gen(n):
     fact_val = 1
     for el in range(1, n + 1):
         fact_val *= el
@@ -14,17 +14,24 @@ def fact_n(n):
 
 
 # data = int(input('Введите целое число: '))
-data = 6
+data = 40
+c = 0
+facto_data = facto_gen(data)
+print(type(facto_data))
 print('Сгенерированная последоваельность фактореалов: ', end='')
-for el in fact_n(data):
+
+for el in facto_data:
+    if c > 14:
+        break
     print(el, end=' ')
+    c += 1
 print()
 
-
 # ---------------------------------------------------------------------------
-# Более короткий вариант.
+# Более короткий вариант. --  это решение показалось инетерссным.
+# импорты ставить не правльно в середине кода, но хотелось разделить варианты решения задачи.
 from itertools import accumulate
 import operator
 
-data = 6
+data = 15
 print(' '.join(map(str, list(accumulate(range(1, data + 1), operator.mul)))))
