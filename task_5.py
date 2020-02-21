@@ -1,11 +1,19 @@
-# 5) Реализовать формирование списка, используя функцию range() и возможности генератора. В
-# список должны войти четные числа от 100 до 1000 (включая границы). Необходимо получить
-# результат вычисления произведения всех элементов списка.
-# Подсказка: использовать функцию reduce().​
+# 5) Создать (программно) текстовый файл, записать в него программно набор чисел,
+# разделенных пробелами. Программа должна подсчитывать сумму чисел в файле и выводить
+# ее на экран.
 
+import random
 from functools import reduce
 
-my_list = [el for el in range(100, 1001)]
-print(my_list)
+with open('task_5_file.txt', 'w', encoding='utf-8') as f_obj:
+    digits_list = [str(random.randint(0, 30)) for __ in range(7)]
+    print(digits_list)
+    for line in digits_list:
+        f_obj.write(f'{line} ')
 
-print(f'Результат произведения: {reduce(lambda x, y: x * y, my_list)}')
+
+with open('task_5_file.txt', 'r+', encoding='utf-8') as f_obj:
+    lines_list = list(map(int, f_obj.readline().split()))
+    values_sum = reduce(lambda x, y: x + y, lines_list)
+    print(values_sum)
+    f_obj.write(f'\nСумма чисел первой сроки: {values_sum}')
