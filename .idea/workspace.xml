@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efc14317-0d91-4d12-be37-62abeb085b39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/task_2_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_3_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_4_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_6_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_7_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_7.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +31,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.task_7">
+  <component name="RunManager" selected="Python.task_5">
     <configuration name="task_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_learn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,10 +202,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="223" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1580995010818" />
-    <state x="499" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582273715465">
+    <state x="499" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582463656669">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1582273715465" />
+    <state x="499" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1582463656669" />
     <state x="524" y="121" key="#xdebugger.evaluate" timestamp="1581414466796">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -230,55 +219,55 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="360" y="151" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1580988940565" />
-    <state width="1515" height="101" key="GridCell.Tab.0.bottom" timestamp="1582273698962">
+    <state width="1515" height="199" key="GridCell.Tab.0.bottom" timestamp="1582303661742">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="101" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582273698962" />
-    <state width="1515" height="101" key="GridCell.Tab.0.center" timestamp="1582273698962">
+    <state width="1515" height="199" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582303661742" />
+    <state width="1515" height="199" key="GridCell.Tab.0.center" timestamp="1582303661737">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="101" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1582273698962" />
-    <state width="1515" height="101" key="GridCell.Tab.0.left" timestamp="1582273698962">
+    <state width="1515" height="199" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1582303661737" />
+    <state width="1515" height="199" key="GridCell.Tab.0.left" timestamp="1582303661737">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="101" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1582273698962" />
-    <state width="1515" height="101" key="GridCell.Tab.0.right" timestamp="1582273698962">
+    <state width="1515" height="199" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1582303661737" />
+    <state width="1515" height="199" key="GridCell.Tab.0.right" timestamp="1582303661739">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="101" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1582273698962" />
-    <state width="1515" height="187" key="GridCell.Tab.1.bottom" timestamp="1582232974573">
+    <state width="1515" height="199" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1582303661739" />
+    <state width="1515" height="187" key="GridCell.Tab.1.bottom" timestamp="1582279055363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="187" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582232974573" />
-    <state width="1515" height="187" key="GridCell.Tab.1.center" timestamp="1582232974573">
+    <state width="1515" height="187" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582279055363" />
+    <state width="1515" height="187" key="GridCell.Tab.1.center" timestamp="1582279055363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="187" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1582232974573" />
-    <state width="1515" height="187" key="GridCell.Tab.1.left" timestamp="1582232974573">
+    <state width="1515" height="187" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1582279055363" />
+    <state width="1515" height="187" key="GridCell.Tab.1.left" timestamp="1582279055363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="187" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1582232974573" />
-    <state width="1515" height="187" key="GridCell.Tab.1.right" timestamp="1582232974573">
+    <state width="1515" height="187" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1582279055363" />
+    <state width="1515" height="187" key="GridCell.Tab.1.right" timestamp="1582279055363">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1580934513446" />
-    <state width="1515" height="187" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1582232974573" />
-    <state x="279" y="63" key="SettingsEditor" timestamp="1580990444863">
+    <state width="1515" height="187" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1582279055363" />
+    <state x="279" y="63" key="SettingsEditor" timestamp="1582463794669">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="279" y="63" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1580990444863" />
-    <state x="445" y="115" key="com.intellij.ide.util.TipDialog" timestamp="1581875824605">
+    <state x="279" y="63" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582463794669" />
+    <state x="445" y="115" key="com.intellij.ide.util.TipDialog" timestamp="1582463133732">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="445" y="114" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580845602317" />
-    <state x="445" y="115" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1581875824605" />
+    <state x="445" y="115" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582463133732" />
     <state x="410" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582225348151">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -300,11 +289,6 @@
           <url>file://$PROJECT_DIR$/task_1.py</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/task_5.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

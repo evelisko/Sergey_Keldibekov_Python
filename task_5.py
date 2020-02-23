@@ -14,6 +14,7 @@ with open('task_5_file.txt', 'w', encoding='utf-8') as f_obj:
 
 with open('task_5_file.txt', 'r+', encoding='utf-8') as f_obj:
     lines_list = list(map(int, f_obj.readline().split()))
-    values_sum = reduce(lambda x, y: x + y, lines_list)
+    # values_sum = reduce(lambda x, y: x + y, lines_list)
+    values_sum = sum(lines_list)
     print(values_sum)
     f_obj.write(f'\nСумма чисел первой сроки: {values_sum}')
