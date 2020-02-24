@@ -1,20 +1,49 @@
-# 5) Создать (программно) текстовый файл, записать в него программно набор чисел,
-# разделенных пробелами. Программа должна подсчитывать сумму чисел в файле и выводить
-# ее на экран.
-
-import random
-from functools import reduce
-
-with open('task_5_file.txt', 'w', encoding='utf-8') as f_obj:
-    digits_list = [str(random.randint(0, 30)) for __ in range(7)]
-    print(digits_list)
-    for line in digits_list:
-        f_obj.write(f'{line} ')
+# 5. Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название)
+# и метод draw (отрисовка). Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка),
+# Pencil (карандаш), Handle (маркер). В каждом из классов реализовать переопределение метода draw.
+# Для каждого из классов методы должен выводить уникальное сообщение. Создать экземпляры классов и проверить,
+# что выведет описанный метод для каждого экземпляра.
 
 
-with open('task_5_file.txt', 'r+', encoding='utf-8') as f_obj:
-    lines_list = list(map(int, f_obj.readline().split()))
-    # values_sum = reduce(lambda x, y: x + y, lines_list)
-    values_sum = sum(lines_list)
-    print(values_sum)
-    f_obj.write(f'\nСумма чисел первой сроки: {values_sum}')
+class Stationery(object):
+    def __init__(self):
+        self._title = ''
+
+    def draw(self):
+        print(f'{self._title} Запуск отрисовки')
+
+
+class Pencil(Stationery):
+    def __init__(self):
+        super().__init__()
+        self._title = 'Pencil'
+
+    def draw(self):
+        print(f'{self._title} Делаем набросок')
+
+
+class Handle(Stationery):
+    def __init__(self):
+        super().__init__()
+        self._title = 'Handle'
+
+    def draw(self):
+        print(f'{self._title} Выделяем текст')
+
+
+class Pen(Stationery):
+    def __init__(self):
+        super().__init__()
+        self._title = 'Pen'
+
+    def draw(self):
+        print(f'{self._title} Пишем письмо')
+
+
+stationery_1 = Pen()
+stationery_2 = Pencil()
+stationery_3 = Handle()
+
+stationery_1.draw()
+stationery_2.draw()
+stationery_3.draw()

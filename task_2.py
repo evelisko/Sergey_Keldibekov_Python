@@ -1,18 +1,35 @@
-# 2) Создать текстовый файл (не программно), сохранить в нем несколько строк, выполнить
-# подсчет количества строк, количества слов в каждой строке.
+# 2. Реализовать класс Road (дорога), в котором определить атрибуты: length (длина), width (ширина).
+# Значения данных атрибутов должны передаваться при создании экземпляра класса. Атрибуты сделать защищенными.
+# Определить метод расчета массы асфальта, необходимого для покрытия всего дорожного полотна.
+# Использовать формулу: длинаширинамасса асфальта для покрытия одного кв метра дороги асфальтом,
+# толщиной в 1 см*число см толщины полотна. Проверить работу метода.
+# Например: 20м*5000м*25кг*5см = 12500 т
+
+from user_functions import float_convert
 
 
-with open('task_2_file.txt', 'r', encoding='utf-8') as f_obj:
-    content_as_list = f_obj.read().splitlines()
+class Road(object):
 
-print(content_as_list)
+    def __init__(self, length, width, height=5, specific_massa=25):
+        self._length = length
+        self._width = width
+        self._heigth = height
+        self._specific_massa = specific_massa
 
-lines_count = len(content_as_list)
-print(f'Всего строк: {lines_count}')
+    def set_heigth(self, height):
+        self._heigth = float_convert(height)
+        if self._heigth == -1:
+            self._heigth = 5
 
-c = 1
-for el in content_as_list:
-    word_count = el.split()
-    print(f'{c}:  {len(word_count)}')
-    c += 1
+    def set_specific_massa(self, massa):
+        self._specific_massa = float_convert(massa)
+        if self._specific_massa == -1:
+            self._specific_massa = 25
 
+    def asphalt_massa_calc(self):
+        return self._length * self._heigth * self._width * self._specific_massa
+
+
+road = Road(length=5000, width=20)
+road.set_heigth(6)
+print(f'Масса асфальта: {road.asphalt_massa_calc() / 1000}(тон.)')
