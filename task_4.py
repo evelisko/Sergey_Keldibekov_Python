@@ -19,6 +19,7 @@ class Trun(Enum):
 
 class Car(object):
     car_type = 'Custom'
+    speed_limit = None
 
     def __init__(self, name, color):
         self._speed = 0.0
@@ -43,29 +44,32 @@ class Car(object):
         self._turn = truning
 
     def show_speed(self):
-        return (self._speed)
+        if self.speed_limit and self._speed > self.speed_limit:
+            print('Вы превысили скорость', end=' ')
+        return self._speed
 
 
 class SportCar(Car):
     car_type = 'SportCar'
 
-
 class TownCar(Car):
     car_type = 'TownCar'
+    speed_limit = 60
 
-    def show_speed(self):
-        if self._speed > 60:
-            print(f'{self._speed} Вы превысили скорость', end=' ')
-        return super(TownCar, self).show_speed()
+    # def show_speed(self):
+    #     if self._speed > speed_limit:
+    #         print(f'{self._speed} Вы превысили скорость', end=' ')
+    #     return super(TownCar, self).show_speed()
 
 
 class WorkCar(Car):
     car_type = 'WorkCar'
+    speed_limit = 40
 
-    def show_speed(self):
-        if self._speed > 40:
-            print('Вы превысили скорость', end=' ')
-        return self._speed
+    # def show_speed(self):
+    #     if self._speed > 40:
+    #         print('Вы превысили скорость', end=' ')
+    #     return self._speed
 
 
 class PoliceCar(Car):

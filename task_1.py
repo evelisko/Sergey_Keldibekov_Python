@@ -11,17 +11,17 @@ import time
 
 
 class TrafficLight(object):
-    _colors = {'Красный':7, 'Желтый':2, 'Зеленый':5}
+    _colors = {'Красный': 7, 'Желтый': 2, 'Зеленый': 5}
 
     def __init__(self):
         self._color = self._colors['Красный']
 
     def running(self):
-        for cl,tm in self._colors.items():
-           self._color = cl
-           print(self._color)
-           # print(f'{self._color} {tm}сек.')
-           time.sleep(tm)
+        for cl, tm in self._colors.items():
+            self._color = cl
+            print(self._color)
+            # print(f'{self._color} {tm}сек.')
+            time.sleep(tm)
 
     def get_sate(self):
         return self._color
@@ -30,4 +30,3 @@ class TrafficLight(object):
 trafic_lighter = TrafficLight()
 trafic_lighter.running()
 print('Программа завершила работу')
-

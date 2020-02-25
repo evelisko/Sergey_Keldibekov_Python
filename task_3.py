@@ -23,12 +23,12 @@ class Worker(object):
         return f'{self._name} {self._surname}'
 
     def set_income(self, **income):
-        if float_convert(income['wage']) != -1 and float_convert(income['bonus']) != -1:
+        try:  # if float_convert(income['wage']) != -1 and float_convert(income['bonus']) != -1:
             self._income = income
             if self._income['wage'] < 12000:
                 print(f'зарплата работника ({self._name} {self._surname}) не может быть ниже прожиточного минимума!!!')
                 # self._income['wage'] = 12000   # установить зарплату равную прожиточнуму минимуму
-        else:
+        except:
             print('не верный формат для данных')
 
 
@@ -36,7 +36,7 @@ class Position(Worker):
 
     def __init__(self, name, surname, position, wage=12000, bonus=0):
         super().__init__(name, surname, position)
-        self.set_income(wage=wage,bonus=bonus)
+        self.set_income(wage=wage, bonus=bonus)
 
     def get_full_name(self):
         return f'{self._name} {self._surname} - {self._position}'
