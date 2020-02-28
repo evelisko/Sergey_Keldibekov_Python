@@ -9,7 +9,8 @@
 # больше нуля, иначе выводить соответствующее сообщение. Умножение. Создается общая клетка из двух.
 # Число ячеек общей клетки определяется как произведение количества ячеек этих двух клеток.
 # Деление. Создается общая клетка из двух. Число ячеек общей клетки определяется как целочисленное деление
-# количества ячеек этих двух клеток. В классе необходимо реализовать метод make_order(), принимающий экземпляр
+# количества ячеек этих двух клеток.
+# В классе необходимо реализовать метод make_order(), принимающий экземпляр
 # класса и количество ячеек в ряду. Данный метод позволяет организовать ячейки по рядам.
 # Метод должен возвращать строку вида **\n\n***..., где количество ячеек между \n равно переданному аргументу.
 # Если ячеек на формирование ряда не хватает, то в последний ряд записываются все оставшиеся.
@@ -19,47 +20,78 @@
 # Подсказка: подробный список операторов для перегрузки доступен по ссылке.
 
 
-
-class Worker(object):
-
-    def __init__(self, name, surname, position):
-        self._name = name
-        self._surname = surname
-        self._position = position
-        self._income = {"wage": None,
-                        "bonus": None}  # по идее, этот атрибут можно здесь не определять а задать в дочернем классе.
+class Cell:
+    def __init__(self, cell_count):
+        self._cell_count = None
+        self.cell_count = cell_count
 
     def __str__(self):
-        return f'{self._name} {self._surname}'
+        return f'{self._cell_count}'
 
-    def set_income(self, **income):
-        try:  # if float_convert(income['wage']) != -1 and float_convert(income['bonus']) != -1:
-            self._income = income
-            if self._income['wage'] < 12000:
-                print(f'зарплата работника ({self._name} {self._surname}) не может быть ниже прожиточного минимума!!!')
-                # self._income['wage'] = 12000   # установить зарплату равную прожиточнуму минимуму
-        except:
-            print('не верный формат для данных')
+    @property
+    def cell_count(self):
+        return self._cell_count
+
+    @cell_count.setter
+    def cell_count(self, count):
+        try:
+            int(count)
+        except Exception as ex:
+            print(f'Количество ячеек в клетке должно иметь целочисленное значение {ex}')
+        else:
+            self._cell_count = int(count)
+
+    def __add__(self, other):  # +
+        return Cell(self._cell_count + other.cell_count)
+
+    def __sub__(self, other):  # -
+        result = self._cell_count - other.cell_count
+        if result > 0:
+            return Cell(result)
+        else:
+            print('результат не может быть меньше 1')
+
+    def __mul__(self, other):  # *
+        return Cell(self._cell_count * other.cell_count)
+
+    def __truediv__(self, other):  # /
+        result = self._cell_count // other.cell_count
+        return Cell(result) if result > 0 else print('результат не может быть меньше 1')
+
+    def make_order(self, line_count):
+        cells = ''
+        cell_line = 1
+        for __ in range(self._cell_count):
+            if cell_line > line_count:
+                cells += '\n'
+                cell_line = 1
+            cells += '*'
+            cell_line += 1
+        return cells
 
 
-class Position(Worker):
+cell_1 = Cell(10)
+cell_2 = Cell(5)
 
-    def __init__(self, name, surname, position, wage=12000, bonus=0):
-        super().__init__(name, surname, position)
-        self.set_income(wage=wage, bonus=bonus)
+print('Cложение\n----------------------------')
+result_cell = cell_1 + cell_2
+print(f'1){cell_1.cell_count} + {cell_2.cell_count} = {result_cell}')
 
-    def get_full_name(self):
-        return f'{self._name} {self._surname} - {self._position}'
+print('\nВычитаие\n----------------------------')
+result_cell = cell_2 - cell_1
+print(f'2){cell_2.cell_count} - {cell_1.cell_count} = {result_cell}')
 
-    def get_total_income(self):
-        return self._income['wage'] + self._income['bonus']
+result_cell = cell_1 - cell_2
+print(f'3){cell_1.cell_count} - {cell_2.cell_count} = {result_cell}')
 
+print('\nУмножение\n----------------------------')
+result_cell = cell_1 * cell_2
+print(f'4){cell_1.cell_count} * {cell_2.cell_count} = {result_cell}')
 
-worker_1 = Position('Иван', 'Иванов', position='Водитель', wage=12000, bonus=1500)
-print(worker_1.get_full_name())
-print(f'Зарплата: {worker_1.get_total_income()}')
+print('\nДеление\n----------------------------')
 
-worker_2 = Position('Юрий', 'Иванов', position='Водитель')
-worker_2.set_income(wage=10000, bonus=1600)
-print(worker_2.get_full_name())
-print(f'Зарплата: {worker_2.get_total_income()}')
+result_cell = cell_2 / cell_1
+print(f'5){cell_2.cell_count} / {cell_1.cell_count} = {result_cell}')
+
+result_cell = cell_1 / cell_2
+print(f'6){cell_1.cell_count} / {cell_2.cell_count} = {result_cell}\n----------------------------')

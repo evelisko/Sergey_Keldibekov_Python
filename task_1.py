@@ -8,63 +8,42 @@
 # Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки первой матрицы складываем
 # с первым элементом первой строки второй матрицы и т.д.
 
-class Matrix(object):
 
-    def __init__(self,*args):
-        self._matrix = args
+class Matrix():
+
+    def my_func(self, a, b):
+        return a + b
+
+    def __init__(self, argv):
+        self.matrix = argv
 
     def __str__(self):
-       strs = ''
-       for el in self._matrix:  #todo сделатьправильный вывод.
-            strs += ' '.join(map(string, el)) + '\n'
-       return strs
+        strs = ''
+        for el in self.matrix:
+            strs += '|\t' + '\t|\t'.join(map(str, el)) + '\t|\n'
+        return strs
 
-    # сложение матриц.
+    def __add__(self, other):
+        result = []
+        try:
+            for ex, ey in map(lambda *x: x, self.matrix, other.matrix):
+                result.append(list(map(lambda x, y: x + y, ex, ey)))
+        except Exception as ex:
+            print(f'Складываемые матрицы имеют разную размерность {ex}')
+        else:
+            return Matrix(result)
 
-simple_matrix = [[1,2,3],[4,6,7],[7,8,9]]
+
+simple_matrix = [[1, 2, 3], [4, 6, 7], [8, 9, 10]]
+simple_matrix_1 = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrix_1 = Matrix(simple_matrix)
+matrix_2 = Matrix(simple_matrix_1)
+print('Матрица A:\n-------------------------------')
 print(matrix_1)
+print('Матрица B:\n-------------------------------')
+print(matrix_2)
 
+matrix_3 = matrix_1 + matrix_2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# import time
-#
-#
-# class TrafficLight(object):
-#     _colors = {'Красный': 7, 'Желтый': 2, 'Зеленый': 5}
-#
-#     def __init__(self):
-#         self._color = self._colors['Красный']
-#
-#     def running(self):
-#         for cl, tm in self._colors.items():
-#             self._color = cl
-#             print(self._color)
-#             # print(f'{self._color} {tm}сек.')
-#             time.sleep(tm)
-#
-#     def get_sate(self):
-#         return self._color
-#
-#
-# trafic_lighter = TrafficLight()
-# trafic_lighter.running()
-# print('Программа завершила работу')
+print('Результат сложения \n-------------------------------')
+print(matrix_3)
