@@ -14,15 +14,25 @@ from abc import ABC, abstractmethod
 class Clothing(ABC):
     def __init__(self):
         self._size = None
-        self._used_fabrics = None
-
-    @abstractmethod
-    def calc_used_fabrics(self):
-        pass
+        self._used_material = None
 
     @property
-    def used_fabrics(self):
-        return self._used_fabrics
+    @abstractmethod
+    def calc_material(self):
+        pass
+
+    def __add__(self, other):
+        result = Clothing()
+        result.used_material = self.used_material + other.used_material
+        return result
+
+    @property
+    def used_material(self):
+        return self._used_material
+
+    @used_material.setter
+    def used_material(self, val):
+        self._used_material = val
 
     @property
     def size(self):
@@ -36,20 +46,20 @@ class Clothing(ABC):
             print('значение должно соответствовать типу float')
         else:
             self._size = float(value)
-            self.calc_used_fabrics()
+            self.calc_material()
 
     def __str__(self):
-        return f'Размер:{self._size}, иcпользовано ткани: {self._used_fabrics:.3f}'
+        return f'Размер:{self._size}, иcпользовано ткани: {self._used_material:.3f}'
 
 
 class Coat(Clothing):  # Пальто
     def __init__(self, size):
         super().__init__()
         self._size = size
-        self.calc_used_fabrics()
+        self.calc_material()
 
-    def calc_used_fabrics(self):
-        self._used_fabrics = self._size / 6.5 + 0.5
+    def calc_material(self):
+        self._used_material = self._size / 6.5 + 0.5
 
 
 class Costume(Clothing):  # Костюм
@@ -57,10 +67,10 @@ class Costume(Clothing):  # Костюм
     def __init__(self, heigth):
         super().__init__()
         self._size = heigth
-        self.calc_used_fabrics()
+        self.calc_material()
 
-    def calc_used_fabrics(self):
-        self._used_fabrics = 2 * self._size + 0.3
+    def calc_material(self):
+        self._used_material = 2 * self._size + 0.3
 
 
 costume_1 = Costume(60)
@@ -70,12 +80,13 @@ print(costume_1)
 print(coat_1)
 print('-------------------------------------')
 
-costume_used_fabrics = costume_1.used_fabrics
-coast_used_fabrics = coat_1.used_fabrics
+costume_used_material = costume_1.used_material
+coast_used_material = coat_1.used_material
 
-print(f'Расход ткани на костюм: {costume_used_fabrics:.3f}')
-print(f'Расход ткани на пальто: {coast_used_fabrics:.3f}')
+print(f'Расход ткани на костюм: {costume_used_material:.3f}')
+print(f'Расход ткани на пальто: {coast_used_material:.3f}')
 
-summary_used = coat_1.used_fabrics + costume_1.used_fabrics
+# summary_used = coat_1.used_fabrics + costume_1.used_fabrics
+summary_used = coat_1 + costume_1
 
 print(f'Общий расход ткани: {summary_used:.3f}')

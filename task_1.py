@@ -27,7 +27,8 @@ class Matrix():
         result = []
         try:
             for ex, ey in map(lambda *x: x, self.matrix, other.matrix):
-                result.append(list(map(lambda x, y: x + y, ex, ey)))
+                # result.append(list(map(lambda x, y: x + y, ex, ey)))
+                result.append(list(map(sum, zip(ex, ey))))
         except Exception as ex:
             print(f'Складываемые матрицы имеют разную размерность {ex}')
         else:
