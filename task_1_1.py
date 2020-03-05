@@ -6,9 +6,8 @@
 
 class Date(object):
 
-    def __init__(self, val):
-        self._date = {'day': None, 'month': None, 'year': None}
-        self._date = self.data_converter(val)
+    def __init__(self, *args):
+        self._date = {'day': args[0], 'month': args[1], 'year': args[2]}
 
     @staticmethod
     def data_validate(*args):
@@ -29,14 +28,13 @@ class Date(object):
             else:
                 print(f'значение {el} не является числом')
         if cls.data_validate(*values):
-            cls._date = {'day': values[0], 'month': values[1], 'year': values[2]}
-            return cls._date
+            return cls(*values)
 
     def __str__(self):
         return f'{self._date["day"]:02d}.{self._date["month"]:02d}.{self._date["year"]:02d}'
 
 
-date_1 = Date('12 - 12 - 2014')
-date_2 = Date.data_converter('12 - 12 - 2014')
+date_1 = Date(1, 11, 2015)
+date_2 = Date.data_converter('02 - 05 - 2020')
 print(date_1)
 print(date_2)
