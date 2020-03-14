@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efc14317-0d91-4d12-be37-62abeb085b39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/task_1_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,11 +298,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="279" y="63" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582742648165" />
-    <state x="445" y="115" key="com.intellij.ide.util.TipDialog" timestamp="1583381932861">
+    <state x="445" y="115" width="883" height="610" key="com.intellij.ide.util.TipDialog" timestamp="1584272505045">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="445" y="114" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580845602317" />
-    <state x="445" y="115" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1583381932861" />
+    <state x="445" y="115" width="883" height="610" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584272505045" />
     <state x="410" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582225348151">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
